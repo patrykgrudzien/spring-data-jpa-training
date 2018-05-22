@@ -30,7 +30,7 @@ import java.util.Properties;
  * 2) Configure the base packages that are scanned when Spring Data JPA creates implementations for our repository interfaces.
  */
 @EnableJpaRepositories(basePackages = {
-		"com.jurik99.jpa"
+		"com.jurik99"
 })
 public class PersistenceContext {
 
@@ -70,7 +70,7 @@ public class PersistenceContext {
 		final LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactoryBean.setDataSource(dataSource);
 		entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-		entityManagerFactoryBean.setPackagesToScan("com.jurik99.jpa");
+		entityManagerFactoryBean.setPackagesToScan("com.jurik99");
 
 		final Properties jpaProperties = new Properties();
 
