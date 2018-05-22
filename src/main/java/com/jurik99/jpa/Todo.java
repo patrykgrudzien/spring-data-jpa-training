@@ -39,6 +39,9 @@ public class Todo {
 	@Column(name = "title", nullable = false, length = 100)
 	private String title;
 
+	@Column(name = "header", nullable = false, length = 50)
+	private String header;
+
 	@Version
 	private long version;
 }
